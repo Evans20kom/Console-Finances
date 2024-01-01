@@ -87,4 +87,4 @@ var finances = [
     ['Feb-2017', 671099],
   ];
 
-  
+console.log(finances)
