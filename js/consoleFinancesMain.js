@@ -104,6 +104,30 @@ for (var sumCounter = 0; sumCounter < finances.length; sumCounter++) {
 
 }
 
+//Assignment task 3: Calculate the average of the changes in Profit/Losses over the entire period.
+var averageChanges = 0
+var averageChangeCounter = 0;
+var monthlyChanges = 0
+var totalofChanges = 0
+var averageDenominator = totalMonths - 1
+
+
+for (var averageChangeCounter = 0; averageChangeCounter < averageDenominator; averageChangeCounter++) {
+  //Step 1: calculate monthly change per month
+  monthlyChanges = finances[averageChangeCounter++][1] - finances[averageChangeCounter][1];
+  //Step 2: Add total of changes and assign to variable totalofChanges
+  totalofChanges += monthlyChanges;
+}
+
+averageChanges = totalofChanges/averageDenominator;
+
+
+console.log(averageChanges);
+
+
+
+console.log(averageChangeCounter + 2)
+
 
 console.log(totalMonths);
 console.log(finances[0][0]);
