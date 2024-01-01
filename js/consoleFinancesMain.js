@@ -1,4 +1,5 @@
 // Initial research for type of array: Map method. Details found: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+// Final identification of Array type: Two-dimensional array, found in: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array; analyzed in: https://www.freecodecamp.org/news/javascript-2d-arrays/
 
 var finances = [
     ['Jan-2010', 867884],
@@ -89,4 +90,5 @@ var finances = [
     ['Feb-2017', 671099],
   ];
 
-console.log(finances)
+// Example of syntax for referencing two dimensional arrays: arrayName[arrayRow][arrayColumn] (eg. console.log(finances[65][0]) prints only date of row 65)
+
