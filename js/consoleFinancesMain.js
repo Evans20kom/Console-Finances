@@ -122,6 +122,9 @@ for (var averageChangeCounter = 0; averageChangeCounter < averageDenominator; av
 averageChanges = totalofChanges/averageDenominator;
 
 
+//Assignment task 4: Calculate the greatest increase in profits/losses.
+//Proposed: Define Variables. Loop with counters. If number bigger than previous, save counter and amount to final variables
+
 console.log(averageChanges);
 
 
