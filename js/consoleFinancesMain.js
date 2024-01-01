@@ -92,9 +92,19 @@ var finances = [
 
 // Example of syntax for referencing two dimensional arrays: arrayName[arrayRow][arrayColumn] (eg. console.log(finances[65][0]) prints only date of row 65)
 
+// Assignment task 1: Calculate total number of months in array
 var totalMonths = [finances.length];
 
+//Assignment task 2: Calculate the net total amount of Profit/Losses over the entire period
+var total = 0;
+var sumCounter = 0
+for (var sumCounter = 0; sumCounter < finances.length; sumCounter++) {
+
+  total += finances[sumCounter][1];
+
+}
 
 
 console.log(totalMonths);
 console.log(finances[0][0]);
+console.log(total);
