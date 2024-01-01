@@ -11,3 +11,6 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 Looked for details on two dimensional arrays and code here:
 https://www.freecodecamp.org/news/javascript-2d-arrays/
+
+Found how to add within an array here:
+https://www.freecodecamp.org/news/how-to-add-numbers-in-javascript-arrays/
