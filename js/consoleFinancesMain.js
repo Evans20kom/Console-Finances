@@ -1,3 +1,5 @@
+// Initial research for type of array: Map method. Details found: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+
 var finances = [
     ['Jan-2010', 867884],
     ['Feb-2010', 984655],
