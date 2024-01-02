@@ -21,6 +21,9 @@ https://stackoverflow.com/questions/27589902/addition-and-subtraction-with-negat
 Found how to convert number to string here:
 https://www.digitalocean.com/community/tutorials/how-to-convert-data-types-in-javascript#converting-values-to-strings
 
+Found how to round to two decimal points here:
+https://codedamn.com/news/javascript/javascript-round-a-number-to-2-decimal-places-with-examples
+
 Tests Peformed:
 Array calculated separately in Microsoft Excel to establish accuracy of numbers. When numbers at Excel and Console did not match, code was ran in small portion of array. Bug was identified as a mathematical error as minus symbols in deduction cancel out and produce inaccurate results. After research, I used the "parseInt" function to perform additions of numbers.
 
