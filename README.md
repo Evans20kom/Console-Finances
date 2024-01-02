@@ -12,7 +12,8 @@ While building this application, I have learnt about two-dimensional arrays and 
 
 ## Table of Contents (Optional)
 
-N/A
+You can find the deployed application [here](https://evans20kom.github.io/Console-Finances/): https://evans20kom.github.io/Console-Finances/
+You can find the github repo [here](https://github.com/Evans20kom/Console-Finances): https://github.com/Evans20kom/Console-Finances
 
 ## Installation
 
@@ -20,7 +21,7 @@ N/A
 
 ## Usage
 
-When you open the deployed application [here](https://github.com/Evans20kom/Console-Finances), a blank page will appear that prompts you to look in the console window:
+When you open the deployed application [here](https://evans20kom.github.io/Console-Finances/), a blank page will appear that prompts you to look in the console window:
     
     ![Open application on Browser](img/Instructions1.png)
     
