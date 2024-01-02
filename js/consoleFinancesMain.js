@@ -91,7 +91,10 @@ var finances = [
   ];
 
 // Example of syntax for referencing two dimensional arrays: arrayName[arrayRow][arrayColumn] (eg. console.log(finances[65][0]) prints only date of row 65)
-console.log(finances[1][1])
+var negative1 = 7
+var negative2 = 11
+var deduce = parseInt(negative1) - parseInt(negative2)
+console.log(deduce)
 // Assignment task 1: Calculate total number of months in array
 var totalMonths = [finances.length];
 
@@ -126,6 +129,7 @@ averageChanges = totalofChanges/averageDenominator;
 //Assignment task 4: Calculate the greatest increase in profits/losses.
 //Proposed: Define Variables. Loop with counters. If number bigger than previous, save counter and amount to final variables
 var counterHighLow = 0 //New counter to avoid contaminating previous loops.
+var mathCounterHighLow = 0 // counter to perform mathematical operations within loop conditional statements; using loop counter leads to errors.
 var monthlyDifference = 0 // Similar to monthlyChanges; different variable name to avoid contamination of results above.
 var greatestIncrease = 0 // Variable to hold final greatest increase number
 var greatestDecrease = 0 // Variable to hold final greatest decrease number
@@ -134,22 +138,23 @@ var dateofgreatestDecrease = 0 // Variable to hold position in array of greatest
 
 //loop similar to Assignment task 3. Reusing averageDenominator for same function. Consider changing name of variable and refactoring code to avoid repetitions.
 for (var counterHighLow = 0; counterHighLow < averageChangeCounter; counterHighLow++) {
-  //Step 1: Establish if both values are positive.
-  if (finances[counterHighLow++][1] > 0 && finances[counterHighLow][1] > 0) {
-    //Step 2: Deduce for positive numbers and add for negative numbers
-    monthlyDifference = finances[counterHighLow++][1] - finances[counterHighLow][1];
-  } else {
-    monthlyDifference = finances[counterHighLow++][1] + finances[counterHighLow][1];
-  }
-  
+    if (finances[counterHighLow][1] * finances[counterHighLow++][1] > 0) {
+      monthlyDifference = finances[mathCounterHighLow++][1] - finances[mathCounterHighLow][1];
+    } else {
+    //Step 2: Subtract numbers using the parseInt function.
+      monthlyDifference = finances[mathCounterHighLow++][1] + finances[mathCounterHighLow][1];
+    }
+
   //Step 3: Conditional statement to assign highest/lowest numbers to separate variables
-  if (monthlyDifference > greatestIncrease) {
-      greatestIncrease = monthlyDifference;
-      dateofgreatestIncrease = counterHighLow;
-  } else if (monthlyDifference < greatestDecrease) {
-      greatestDecrease = monthlyDifference;
-      dateofgreatestDecrease = counterHighLow;
-  }
+   if (monthlyDifference > greatestIncrease) {
+       greatestIncrease = monthlyDifference;
+       dateofgreatestIncrease = counterHighLow;
+   } else if (monthlyDifference < greatestDecrease) {
+       greatestDecrease = monthlyDifference;
+       dateofgreatestDecrease = counterHighLow;
+   }
+
+   mathCounterHighLow++
 }
 
 console.log(greatestIncrease);
