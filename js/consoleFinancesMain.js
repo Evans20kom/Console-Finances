@@ -111,6 +111,7 @@ var mathAverageChangeCounter = 0;
 var monthlyChanges = 0;
 var totalofChanges = 0;
 var averageDenominator = totalMonths - 1;
+var averageChangesRounded = 0;
 
 
 for (var averageChangeCounter = 0; averageChangeCounter < averageDenominator; averageChangeCounter++) {
@@ -125,6 +126,8 @@ for (var averageChangeCounter = 0; averageChangeCounter < averageDenominator; av
 }
 
 averageChanges = totalofChanges/averageDenominator;
+// Round result to two decimal points
+averageChangesRounded = averageChanges.toFixed(2)
 
 
 //Assignment task 4: Calculate the greatest increase in profits/losses.
@@ -160,6 +163,6 @@ console.log("Financial Analysis");
 console.log("----------------");
 console.log("Total Months: " + String(totalMonths));
 console.log("Total: $" + total);
-console.log("Average Change: " + averageChanges);
+console.log("Average Change: " + averageChangesRounded);
 console.log("Greatest Increase in Profits/Losses: " + finances[dateofgreatestIncrease][0] + " ($" + greatestIncrease + ")");
 console.log("Greatest Decrease in Profits/Losses: " + finances[dateofgreatestDecrease][0] + " ($" + greatestDecrease+ ")");
