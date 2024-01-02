@@ -116,6 +116,7 @@ for (var averageChangeCounter = 0; averageChangeCounter < averageDenominator; av
   //Step 1: calculate monthly change per month
   monthlyChanges = finances[averageChangeCounter++][1] - finances[averageChangeCounter][1];
   //Step 2: Add total of changes and assign to variable totalofChanges
+  // Future improvement: Similar function performed below. Consider converting to function to reuse code.
   totalofChanges += monthlyChanges;
 }
 
@@ -124,20 +125,42 @@ averageChanges = totalofChanges/averageDenominator;
 
 //Assignment task 4: Calculate the greatest increase in profits/losses.
 //Proposed: Define Variables. Loop with counters. If number bigger than previous, save counter and amount to final variables
-var counterHighLow = 0
+var counterHighLow = 0 //New counter to avoid contaminating previous loops.
 var monthlyDifference = 0 // Similar to monthlyChanges; different variable name to avoid contamination of results above.
 var greatestIncrease = 0
 var greatestDecrease = 0
+var dateofgreatestIncrease = 0
+var dateofgreatestDecrease = 0
+
+//loop similar to Assignment task 3. Reusing averageDenominator for same function. Consider changing name of variable and refactoring code to avoid repetitions.
+for (var counterHighLow = 0; counterHighLow < averageDenominator; counterHighLow++) {
+  //Step 1: calculate monthly changes and assign to variable.
+  monthlyDifference = finances[counterHighLow++][1] - finances[counterHighLow][1];
+  //Step 2: Conditional statement to assign highest/lowest numbers to separate variables
+  if (monthlyDifference > greatestIncrease) {
+      greatestIncrease = monthlyDifference;
+      dateofgreatestIncrease = counterHighLow;
+  } else if (monthlyDifference < greatestDecrease) {
+      greatestDecrease = monthlyDifference;
+      dateofgreatestDecrease = counterHighLow;
+  }
+}
+
+console.log(greatestIncrease);
+console.log(dateofgreatestIncrease);
+console.log(greatestDecrease);
+console.log(dateofgreatestDecrease);
+
+console.log(finances[73][0])
+console.log (finances[25][0])
+
+// console.log(averageChanges);
 
 
 
-console.log(averageChanges);
+// console.log(averageChangeCounter + 2)
 
 
-
-console.log(averageChangeCounter + 2)
-
-
-console.log(totalMonths);
-console.log(finances[0][0]);
-console.log(total);
+// console.log(totalMonths);
+// console.log(finances[0][0]);
+// console.log(total);
