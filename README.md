@@ -1,31 +1,26 @@
 # Console-Finances
-A Javascript console application that will produce output from the contents of two arrays. The challenge for week 4 of the bootcamp.
-
-# <Your-Project-Title>
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+A Javascript console application that will produce output from the contents of two arrays. The challenge for week 4 of the bootcamp.
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+This application aims to emulate a real world application that receives input in the format of a 2-dimensional array and produces output that is meaningful to the end user (e.g. numerical data and information)
+
+I engaged with this project as it was an opportunity to identify ways to mathematically manipulate array data and present them in a functional way for the end user.
+
+While building this application, I have learnt about two-dimensional arrays and how to call on information from them, how javascript processes mathematical functions, and how to troubleshoot when the application does not behave as expected, by changing elements to identify which part of the application is responsible for the unpredictable output.
 
 ## Table of Contents (Optional)
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+N/A
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+N/A
 
 ## Usage
+
+
 
 Provide instructions and examples for use. Include screenshots as needed.
 
