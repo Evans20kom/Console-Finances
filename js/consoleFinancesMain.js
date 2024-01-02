@@ -137,7 +137,7 @@ var dateofgreatestIncrease = 0 // Variable to hold position in array of greatest
 var dateofgreatestDecrease = 0 // Variable to hold position in array of greatest decrease number
 
 //loop similar to Assignment task 3. Reusing averageDenominator for same function. Consider changing name of variable and refactoring code to avoid repetitions.
-for (var counterHighLow = 0; counterHighLow < averageChangeCounter; counterHighLow++) {
+for (var counterHighLow = 0; counterHighLow < averageDenominator; counterHighLow++) {
     if (finances[counterHighLow][1] * finances[counterHighLow++][1] > 0) {
       monthlyDifference = finances[mathCounterHighLow+1][1] - finances[mathCounterHighLow][1];
     } else {
