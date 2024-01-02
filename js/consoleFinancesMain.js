@@ -120,15 +120,9 @@ var averageDenominator = totalMonths - 1;
 
 for (var averageChangeCounter = 0; averageChangeCounter < averageDenominator; averageChangeCounter++) {
   //Step 1: calculate monthly change per month
-  if (finances[averageChangeCounter][1] > 0 && finances[averageChangeCounter++][1] > 0 && finances[averageChangeCounter][1]>finaces[averageChangeCounter][1]) {
+  
     monthlyChanges = finances[mathAverageChangeCounter+1][1] - finances[mathAverageChangeCounter][1];
-  } else if (finances[averageChangeCounter][1] < 0 && finances[averageChangeCounter++][1] > 0) {
-    monthlyChanges = finances[mathAverageChangeCounter+1][1] - finances[mathAverageChangeCounter][1];
-  } else if (finances[averageChangeCounter][1] > 0 && finances[averageChangeCounter++][1] < 0) {
-    monthlyChanges = finances[mathAverageChangeCounter+1][1] - finances[mathAverageChangeCounter][1];
-  } else if (finances[averageChangeCounter][1] < 0 && finances[averageChangeCounter++][1] < 0) {
-    monthlyChanges = finances[mathAverageChangeCounter+1][1] - finances[mathAverageChangeCounter][1];
-  }
+  
   //Step 2: Add total of changes and assign to variable totalofChanges
   // Future improvement: Similar function performed below. Consider converting to function to reuse code.
   totalofChanges += monthlyChanges;
