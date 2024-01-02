@@ -1,3 +1,6 @@
+// Initial research for type of array: Map method. Details found: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+// Final identification of Array type: Two-dimensional array, found in: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array; analyzed in: https://www.freecodecamp.org/news/javascript-2d-arrays/
+
 var finances = [
     ['Jan-2010', 867884],
     ['Feb-2010', 984655],
@@ -87,4 +90,76 @@ var finances = [
     ['Feb-2017', 671099],
   ];
 
-console.log(finances)
+// Example of syntax for referencing two dimensional arrays: arrayName[arrayRow][arrayColumn] (eg. console.log(finances[65][0]) prints only date of row 65)
+
+// Assignment task 1: Calculate total number of months in array
+var totalMonths = [finances.length];
+
+//Assignment task 2: Calculate the net total amount of Profit/Losses over the entire period
+var total = 0;
+var sumCounter = 0
+for (var sumCounter = 0; sumCounter < finances.length; sumCounter++) {
+
+  total += finances[sumCounter][1];
+
+}
+
+//Assignment task 3: Calculate the average of the changes in Profit/Losses over the entire period.
+var averageChanges = 0;
+var averageChangeCounter = 0;
+var mathAverageChangeCounter = 0;
+var monthlyChanges = 0;
+var totalofChanges = 0;
+var averageDenominator = totalMonths - 1;
+
+
+for (var averageChangeCounter = 0; averageChangeCounter < averageDenominator; averageChangeCounter++) {
+  //Step 1: calculate monthly change per month
+  
+    monthlyChanges = finances[mathAverageChangeCounter+1][1] - finances[mathAverageChangeCounter][1];
+  
+  //Step 2: Add total of changes and assign to variable totalofChanges
+  // Future improvement: Similar function performed below. Consider converting to function to reuse code.
+  totalofChanges += monthlyChanges;
+  mathAverageChangeCounter=mathAverageChangeCounter+1
+}
+
+averageChanges = totalofChanges/averageDenominator;
+
+
+//Assignment task 4: Calculate the greatest increase in profits/losses.
+//Proposed: Define Variables. Loop with counters. If number bigger than previous, save counter and amount to final variables
+var counterHighLow = 0; //New counter to avoid contaminating previous loops.
+var mathCounterHighLow = 0; // counter to perform mathematical operations within loop conditional statements; using loop counter leads to errors.
+var monthlyDifference = 0; // Similar to monthlyChanges; different variable name to avoid contamination of results above.
+var greatestIncrease = 0; // Variable to hold final greatest increase number
+var greatestDecrease = 0; // Variable to hold final greatest decrease number
+var dateofgreatestIncrease = 0; // Variable to hold position in array of greatest increase number
+var dateofgreatestDecrease = 0; // Variable to hold position in array of greatest decrease number
+
+//loop similar to Assignment task 3. Reusing averageDenominator for same function. Consider changing name of variable and refactoring code to avoid repetitions.
+for (var counterHighLow = 0; counterHighLow < averageDenominator; counterHighLow++) {
+  // Step 1: a simple subtraction between monthly results.
+      monthlyDifference = finances[mathCounterHighLow+1][1] - finances[mathCounterHighLow][1];
+
+    
+
+  //Step 3: Conditional statement to assign highest/lowest numbers to separate variables
+   if (monthlyDifference > greatestIncrease) {
+       greatestIncrease = monthlyDifference;
+       dateofgreatestIncrease = counterHighLow+1;
+   } else if (monthlyDifference < greatestDecrease) {
+       greatestDecrease = monthlyDifference;
+       dateofgreatestDecrease = counterHighLow+1;
+   }
+   
+   mathCounterHighLow=mathCounterHighLow + 1
+}
+
+console.log("Financial Analysis");
+console.log("----------------");
+console.log("Total Months: " + String(totalMonths));
+console.log("Total: $" + total);
+console.log("Average Change: " + averageChanges);
+console.log("Greatest Increase in Profits/Losses: " + finances[dateofgreatestIncrease][0] + " ($" + greatestIncrease + ")");
+console.log("Greatest Decrease in Profits/Losses: " + finances[dateofgreatestDecrease][0] + " ($" + greatestDecrease+ ")");
