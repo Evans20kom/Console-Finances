@@ -91,10 +91,12 @@ var finances = [
   ];
 
 // Example of syntax for referencing two dimensional arrays: arrayName[arrayRow][arrayColumn] (eg. console.log(finances[65][0]) prints only date of row 65)
-var negative1 = 7
-var negative2 = 11
-var deduce = parseInt(negative1) - parseInt(negative2)
+var negative1 = 10
+var negative2 = 7
+var deduce = parseInt(negative2) - parseInt(negative1)
+var subtract = negative2 - negative1
 console.log(deduce)
+console.log(subtract)
 // Assignment task 1: Calculate total number of months in array
 var totalMonths = [finances.length];
 
@@ -108,33 +110,43 @@ for (var sumCounter = 0; sumCounter < finances.length; sumCounter++) {
 }
 
 //Assignment task 3: Calculate the average of the changes in Profit/Losses over the entire period.
-var averageChanges = 0
+var averageChanges = 0;
 var averageChangeCounter = 0;
-var monthlyChanges = 0
-var totalofChanges = 0
-var averageDenominator = totalMonths - 1
+var mathAverageChangeCounter = 0;
+var monthlyChanges = 0;
+var totalofChanges = 0;
+var averageDenominator = totalMonths - 1;
 
 
 for (var averageChangeCounter = 0; averageChangeCounter < averageDenominator; averageChangeCounter++) {
   //Step 1: calculate monthly change per month
-  monthlyChanges = finances[averageChangeCounter++][1] - finances[averageChangeCounter][1];
+  if (finances[averageChangeCounter][1] > 0 && finances[averageChangeCounter++][1] > 0 && finances[averageChangeCounter][1]>finaces[averageChangeCounter][1]) {
+    monthlyChanges = finances[mathAverageChangeCounter+1][1] - finances[mathAverageChangeCounter][1];
+  } else if (finances[averageChangeCounter][1] < 0 && finances[averageChangeCounter++][1] > 0) {
+    monthlyChanges = finances[mathAverageChangeCounter+1][1] - finances[mathAverageChangeCounter][1];
+  } else if (finances[averageChangeCounter][1] > 0 && finances[averageChangeCounter++][1] < 0) {
+    monthlyChanges = finances[mathAverageChangeCounter+1][1] - finances[mathAverageChangeCounter][1];
+  } else if (finances[averageChangeCounter][1] < 0 && finances[averageChangeCounter++][1] < 0) {
+    monthlyChanges = finances[mathAverageChangeCounter+1][1] - finances[mathAverageChangeCounter][1];
+  }
   //Step 2: Add total of changes and assign to variable totalofChanges
   // Future improvement: Similar function performed below. Consider converting to function to reuse code.
   totalofChanges += monthlyChanges;
+  mathAverageChangeCounter=mathAverageChangeCounter+1
 }
 
 averageChanges = totalofChanges/averageDenominator;
-
+console.log(averageChanges)
 
 //Assignment task 4: Calculate the greatest increase in profits/losses.
 //Proposed: Define Variables. Loop with counters. If number bigger than previous, save counter and amount to final variables
-var counterHighLow = 0 //New counter to avoid contaminating previous loops.
-var mathCounterHighLow = 0 // counter to perform mathematical operations within loop conditional statements; using loop counter leads to errors.
-var monthlyDifference = 0 // Similar to monthlyChanges; different variable name to avoid contamination of results above.
-var greatestIncrease = 0 // Variable to hold final greatest increase number
-var greatestDecrease = 0 // Variable to hold final greatest decrease number
-var dateofgreatestIncrease = 0 // Variable to hold position in array of greatest increase number
-var dateofgreatestDecrease = 0 // Variable to hold position in array of greatest decrease number
+var counterHighLow = 0; //New counter to avoid contaminating previous loops.
+var mathCounterHighLow = 0; // counter to perform mathematical operations within loop conditional statements; using loop counter leads to errors.
+var monthlyDifference = 0; // Similar to monthlyChanges; different variable name to avoid contamination of results above.
+var greatestIncrease = 0; // Variable to hold final greatest increase number
+var greatestDecrease = 0; // Variable to hold final greatest decrease number
+var dateofgreatestIncrease = 0; // Variable to hold position in array of greatest increase number
+var dateofgreatestDecrease = 0; // Variable to hold position in array of greatest decrease number
 
 //loop similar to Assignment task 3. Reusing averageDenominator for same function. Consider changing name of variable and refactoring code to avoid repetitions.
 for (var counterHighLow = 0; counterHighLow < averageDenominator; counterHighLow++) {
