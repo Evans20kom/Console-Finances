@@ -91,12 +91,7 @@ var finances = [
   ];
 
 // Example of syntax for referencing two dimensional arrays: arrayName[arrayRow][arrayColumn] (eg. console.log(finances[65][0]) prints only date of row 65)
-var negative1 = 10
-var negative2 = 7
-var deduce = parseInt(negative2) - parseInt(negative1)
-var subtract = negative2 - negative1
-console.log(deduce)
-console.log(subtract)
+
 // Assignment task 1: Calculate total number of months in array
 var totalMonths = [finances.length];
 
@@ -130,7 +125,7 @@ for (var averageChangeCounter = 0; averageChangeCounter < averageDenominator; av
 }
 
 averageChanges = totalofChanges/averageDenominator;
-console.log(averageChanges)
+
 
 //Assignment task 4: Calculate the greatest increase in profits/losses.
 //Proposed: Define Variables. Loop with counters. If number bigger than previous, save counter and amount to final variables
@@ -161,11 +156,10 @@ for (var counterHighLow = 0; counterHighLow < averageDenominator; counterHighLow
    mathCounterHighLow=mathCounterHighLow + 1
 }
 
-console.log(greatestIncrease);
-console.log(dateofgreatestIncrease);
-console.log(greatestDecrease);
-console.log(dateofgreatestDecrease);
-
-console.log(finances[25][0])
-console.log (finances[44][0])
-
+console.log("Financial Analysis");
+console.log("----------------");
+console.log("Total Months: " + String(totalMonths));
+console.log("Total: $" + total);
+console.log("Average Change: " + averageChanges);
+console.log("Greatest Increase in Profits/Losses: " + finances[dateofgreatestIncrease][0] + " ($" + greatestIncrease + ")");
+console.log("Greatest Decrease in Profits/Losses: " + finances[dateofgreatestDecrease][0] + " ($" + greatestDecrease+ ")");

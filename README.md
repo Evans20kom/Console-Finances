@@ -18,6 +18,9 @@ https://www.freecodecamp.org/news/how-to-add-numbers-in-javascript-arrays/
 Found how to subtract negative numbers here:
 https://stackoverflow.com/questions/27589902/addition-and-subtraction-with-negative-numbers
 
+Found how to convert number to string here:
+https://www.digitalocean.com/community/tutorials/how-to-convert-data-types-in-javascript#converting-values-to-strings
+
 Tests Peformed:
 Array calculated separately in Microsoft Excel to establish accuracy of numbers. When numbers at Excel and Console did not match, code was ran in small portion of array. Bug was identified as a mathematical error as minus symbols in deduction cancel out and produce inaccurate results. After research, I used the "parseInt" function to perform additions of numbers.
 
