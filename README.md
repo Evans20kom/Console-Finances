@@ -20,45 +20,74 @@ N/A
 
 ## Usage
 
-
-
 Provide instructions and examples for use. Include screenshots as needed.
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
     ```md
-    ![alt text](assets/images/screenshot.png)
+    ![Open application on Browser](img/Instructions1.png)
+    ```
+
+    ```md
+    ![Right Click and Select: "Inspect"](img/Instructions2.png)
+    ```
+
+    ```md
+    ![Select Console on the tabs on the right side](img/Instructions3.png)
+    ```
+
+    ```md
+    ![See the console output on the right side](img/Instructions4.png)
     ```
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+A number of sources were used for the development of this application:
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
 
-If you followed tutorials, include links to those here as well.
+<ul>
+<li>Chris H - Central Grader: Alerted me to the fact that the presentation of my README file is not the expected one; upon investigating, I realized that markdown syntax was not correct</li>
+<li>In my attempt to identify the type of array, I found this source:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map</li>
+
+<li>Identified name of array in starter code here:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</li>
+
+<li>Looked for details on two dimensional arrays and code here:
+https://www.freecodecamp.org/news/javascript-2d-arrays/</li>
+
+<li>Found how to add within an array here:
+https://www.freecodecamp.org/news/how-to-add-numbers-in-javascript-arrays/</li>
+
+<li>Found how to subtract negative numbers here:
+https://stackoverflow.com/questions/27589902/addition-and-subtraction-with-negative-numbers</li>
+
+<li>Found how to convert number to string here:
+https://www.digitalocean.com/community/tutorials/how-to-convert-data-types-in-javascript#converting-values-to-strings</li>
+
+<li>Found how to round to two decimal points here:
+https://codedamn.com/news/javascript/javascript-round-a-number-to-2-decimal-places-with-examples</li>
+
+</ul>
+
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
----
+MIT License
 
 🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
 
 ## Badges
 
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+N/A
 
 ## Features
 
-If your project has a lot of features, list them here.
+N/A
 
 ## How to Contribute
 
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
+N/A
 
 ## Tests
 
