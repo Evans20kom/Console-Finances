@@ -139,10 +139,10 @@ var dateofgreatestDecrease = 0 // Variable to hold position in array of greatest
 //loop similar to Assignment task 3. Reusing averageDenominator for same function. Consider changing name of variable and refactoring code to avoid repetitions.
 for (var counterHighLow = 0; counterHighLow < averageChangeCounter; counterHighLow++) {
     if (finances[counterHighLow][1] * finances[counterHighLow++][1] > 0) {
-      monthlyDifference = finances[mathCounterHighLow++][1] - finances[mathCounterHighLow][1];
+      monthlyDifference = finances[mathCounterHighLow+1][1] - finances[mathCounterHighLow][1];
     } else {
     //Step 2: Subtract numbers using the parseInt function.
-      monthlyDifference = finances[mathCounterHighLow++][1] + finances[mathCounterHighLow][1];
+      monthlyDifference = finances[mathCounterHighLow+1][1] + finances[mathCounterHighLow][1];
     }
 
   //Step 3: Conditional statement to assign highest/lowest numbers to separate variables
@@ -153,8 +153,8 @@ for (var counterHighLow = 0; counterHighLow < averageChangeCounter; counterHighL
        greatestDecrease = monthlyDifference;
        dateofgreatestDecrease = counterHighLow;
    }
-
-   mathCounterHighLow++
+   
+   mathCounterHighLow=mathCounterHighLow + 1
 }
 
 console.log(greatestIncrease);
@@ -162,8 +162,8 @@ console.log(dateofgreatestIncrease);
 console.log(greatestDecrease);
 console.log(dateofgreatestDecrease);
 
-console.log(finances[73][0])
-console.log (finances[25][0])
+console.log(finances[49][0])
+console.log (finances[61][0])
 
 // console.log(averageChanges);
 
