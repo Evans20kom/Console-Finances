@@ -20,25 +20,22 @@ N/A
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
+When you open the deployed application [here](https://github.com/Evans20kom/Console-Finances), a blank page will appear that prompts you to look in the console window:
+    
     ![Open application on Browser](img/Instructions1.png)
-    ```
-
-    ```md
+    
+Right click on the page and click "inspect". Alternatively, press F12 on your keyboard.
+    
     ![Right Click and Select: "Inspect"](img/Instructions2.png)
-    ```
-
-    ```md
+    
+On the right hand side, you will see a new window. Find the tab that writes "console" at the top, and click on it.
+    
     ![Select Console on the tabs on the right side](img/Instructions3.png)
-    ```
-
-    ```md
+    
+You can see the output of the application on the console window on your right, under the console tab.
+    
     ![See the console output on the right side](img/Instructions4.png)
-    ```
+
 
 ## Credits
 
