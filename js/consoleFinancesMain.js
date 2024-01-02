@@ -91,7 +91,7 @@ var finances = [
   ];
 
 // Example of syntax for referencing two dimensional arrays: arrayName[arrayRow][arrayColumn] (eg. console.log(finances[65][0]) prints only date of row 65)
-
+console.log(finances[1][1])
 // Assignment task 1: Calculate total number of months in array
 var totalMonths = [finances.length];
 
@@ -127,15 +127,15 @@ averageChanges = totalofChanges/averageDenominator;
 //Proposed: Define Variables. Loop with counters. If number bigger than previous, save counter and amount to final variables
 var counterHighLow = 0 //New counter to avoid contaminating previous loops.
 var monthlyDifference = 0 // Similar to monthlyChanges; different variable name to avoid contamination of results above.
-var greatestIncrease = 0
-var greatestDecrease = 0
-var dateofgreatestIncrease = 0
-var dateofgreatestDecrease = 0
+var greatestIncrease = 0 // Variable to hold final greatest increase number
+var greatestDecrease = 0 // Variable to hold final greatest decrease number
+var dateofgreatestIncrease = 0 // Variable to hold position in array of greatest increase number
+var dateofgreatestDecrease = 0 // Variable to hold position in array of greatest decrease number
 
 //loop similar to Assignment task 3. Reusing averageDenominator for same function. Consider changing name of variable and refactoring code to avoid repetitions.
 for (var counterHighLow = 0; counterHighLow < averageChangeCounter; counterHighLow++) {
   //Step 1: Establish if both values are positive.
-  if (finances[counterHighLow++][1]>0 && finances[counterHighLow][1]>0) {
+  if (finances[counterHighLow++][1] > 0 && finances[counterHighLow][1] > 0) {
     //Step 2: Deduce for positive numbers and add for negative numbers
     monthlyDifference = finances[counterHighLow++][1] - finances[counterHighLow][1];
   } else {
