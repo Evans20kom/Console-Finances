@@ -124,6 +124,12 @@ averageChanges = totalofChanges/averageDenominator;
 
 //Assignment task 4: Calculate the greatest increase in profits/losses.
 //Proposed: Define Variables. Loop with counters. If number bigger than previous, save counter and amount to final variables
+var counterHighLow = 0
+var monthlyDifference = 0 // Similar to monthlyChanges; different variable name to avoid contamination of results above.
+var greatestIncrease = 0
+var greatestDecrease = 0
+
+
 
 console.log(averageChanges);
 
