@@ -134,9 +134,15 @@ var dateofgreatestDecrease = 0
 
 //loop similar to Assignment task 3. Reusing averageDenominator for same function. Consider changing name of variable and refactoring code to avoid repetitions.
 for (var counterHighLow = 0; counterHighLow < averageChangeCounter; counterHighLow++) {
-  //Step 1: calculate monthly changes and assign to variable.
-  monthlyDifference = finances[counterHighLow++][1] + finances[counterHighLow][1];
-  //Step 2: Conditional statement to assign highest/lowest numbers to separate variables
+  //Step 1: Establish if both values are positive.
+  if (finances[counterHighLow++][1]>0 && finances[counterHighLow][1]>0) {
+    //Step 2: Deduce for positive numbers and add for negative numbers
+    monthlyDifference = finances[counterHighLow++][1] - finances[counterHighLow][1];
+  } else {
+    monthlyDifference = finances[counterHighLow++][1] + finances[counterHighLow][1];
+  }
+  
+  //Step 3: Conditional statement to assign highest/lowest numbers to separate variables
   if (monthlyDifference > greatestIncrease) {
       greatestIncrease = monthlyDifference;
       dateofgreatestIncrease = counterHighLow;
