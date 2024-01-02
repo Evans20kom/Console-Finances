@@ -13,6 +13,7 @@ While building this application, I have learnt about two-dimensional arrays and 
 ## Table of Contents (Optional)
 
 You can find the deployed application [here](https://evans20kom.github.io/Console-Finances/): https://evans20kom.github.io/Console-Finances/
+
 You can find the github repo [here](https://github.com/Evans20kom/Console-Finances): https://github.com/Evans20kom/Console-Finances
 
 ## Installation
@@ -23,19 +24,31 @@ N/A
 
 When you open the deployed application [here](https://evans20kom.github.io/Console-Finances/), a blank page will appear that prompts you to look in the console window:
     
+
     ![Open application on Browser](img/Instructions1.png)
-    
+
+<img src="img/Instructions1.png" alt="Open application on Browser">
+
+
 Right click on the page and click "inspect". Alternatively, press F12 on your keyboard.
     
     ![Right Click and Select: "Inspect"](img/Instructions2.png)
+
+<img src="img/Instructions2.png" alt="Right Click and Select: Inspect">
     
 On the right hand side, you will see a new window. Find the tab that writes "console" at the top, and click on it.
     
     ![Select Console on the tabs on the right side](img/Instructions3.png)
+
+<img src="img/Instructions3.png" alt="Select Console on the tabs on the right side">
+
     
 You can see the output of the application on the console window on your right, under the console tab.
     
     ![See the console output on the right side](img/Instructions4.png)
+
+<img src="img/Instructions4.png" alt="See the console output on the right side">
+
 
 
 ## Credits
